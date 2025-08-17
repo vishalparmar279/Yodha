@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Yodha — Warrior Tees</title>
+  <meta name="description" content="Yodha — Warrior-themed premium T-shirts. Mahabharat, Shivaji Maharaj, Maharana Pratap and more." />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Razorpay script loaded dynamically in script.js when needed -->
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container nav-row">
+      <div class="brand">
+        <div class="emblem" aria-hidden>
+          <!-- small emblem -->
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden><path d="M11 2l-2 2 2 2V9H8l-2-2-2 2h4v5.5a3.5 3.5 0 106 0V9h4l-2-2-2 2h-3V6l2-2-2-2-2 2z"/></svg>
+        </div>
+        <div class="name">Yodha</div>
+        <span class="chip">Warrior Apparel</span>
+      </div>
+
+      <div class="links" role="navigation">
+        <a href="#shop" data-route="home">Shop</a>
+        <a href="#soon" data-route="soon">Coming Soon</a>
+        <a href="#insta" data-route="insta">Instagram</a>
+        <a href="#about" data-route="about">About</a>
+        <a href="#contact" data-route="contact">Contact</a>
+      </div>
+
+      <div class="actions">
+        <button class="btn ghost" id="openNotify">Notify Drops</button>
+        <button class="btn" id="openCart">Cart (<span id="cart-count">0</span>)</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <span class="chip">Limited Drops • Premium Cotton</span>
+        <h1>Wear the <span class="accent">Warrior</span> Spirit.</h1>
+        <p class="lede">Mahabharat, Shivaji Maharaj, Maharana Pratap — heritage reimagined for the streets. Bold prints, durable fabric, limited-run designs.</p>
+        <div class="hero-ctas">
+          <a href="#shop" class="btn" data-route="home">Shop Collection</a>
+          <button class="btn ghost" data-route="about">Our Story</button>
+        </div>
+        <div class="badges">
+          <span class="chip">100% Combed Cotton</span>
+          <span class="chip">Pre-shrunk</span>
+          <span class="chip">Made in India 🇮🇳</span>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-visual" role="img" aria-label="Warrior silhouette">
+          <!-- background controlled by CSS -->
+          <div class="hero-tag">⚔️ Yodha — Drop 01</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- USPs -->
+  <section class="usps container">
+    <div class="usp-row">
+      <div class="usp"><div class="icon">⚔️</div><div class="txt"><strong>Warrior Aesthetic</strong><div class="muted">Bold prints inspired by legends</div></div></div>
+      <div class="usp"><div class="icon">🧵</div><div class="txt"><strong>Premium Fabric</strong><div class="muted">240 GSM, soft feel</div></div></div>
+      <div class="usp"><div class="icon">🎨</div><div class="txt"><strong>Fade-Resistant</strong><div class="muted">Durable inks</div></div></div>
+      <div class="usp"><div class="icon">🚚</div><div class="txt"><strong>Fast Shipping</strong><div class="muted">Pan-India</div></div></div>
+    </div>
+  </section>
+
+  <!-- SHOP -->
+  <main id="shop" class="container shop-section">
+    <div class="controls">
+      <div class="search">
+        <span>🔎</span>
+        <input id="search" placeholder="Search: Shivaji, Pratap, Mahabharat…" />
+      </div>
+      <div class="filters" id="filters"></div>
+    </div>
+
+    <section id="grid" class="grid-products"></section>
+  </main>
+
+  <!-- COMING SOON -->
+  <section id="soon" class="container coming-soon">
+    <div class="section-head">
+      <h2>Coming Soon</h2>
+      <button class="btn ghost" id="notify2">Notify Me</button>
+    </div>
+    <div id="soonStrip" class="soon-strip"></div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section id="insta" class="container instagram">
+    <div class="section-head">
+      <h2>Instagram</h2>
+      <a class="chip" href="#" target="_blank" rel="noreferrer">@yodha</a>
+    </div>
+    <div id="instagrid" class="insta-grid"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="container about">
+    <div class="about-grid">
+      <div class="panel">
+        <span class="chip">Our Story</span>
+        <h3>Yodha — Born from Legend</h3>
+        <p>Yodha is a tribute to the warriors who shaped our land. We blend heritage art with modern streetwear silhouettes so you can wear your pride every day.</p>
+      </div>
+      <div class="panel">
+        <span class="chip">Quality First</span>
+        <h3>Made to Last</h3>
+        <p>We use premium fabrics, reinforced stitching, and fade-resistant inks. Every drop is limited—crafted in small batches for collectors.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & NEWSLETTER -->
+  <section id="contact" class="container contact">
+    <div class="contact-panel panel">
+      <h3>Contact</h3>
+      <form id="contactForm" class="contact-form">
+        <input name="name" placeholder="Your name" required />
+        <input name="email" type="email" placeholder="Email" required />
+        <textarea name="msg" placeholder="Message" rows="4"></textarea>
+        <button class="btn" type="submit">Send</button>
+      </form>
+      <p id="contactNote" class="muted">This is demo — saved locally.</p>
+    </div>
+
+    <div id="newsletter" class="panel newsletter">
+      <h3>Join the Clan</h3>
+      <div class="newsletter-row">
+        <input id="subEmail" placeholder="Get drop alerts" type="email" />
+        <button id="subBtn" class="btn">Subscribe</button>
+      </div>
+      <p class="muted">We store demo subs locally; integrate Mailchimp/Resend in backend.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand-row"><div class="emblem small"></div><div class="name">Yodha</div></div>
+        <p class="muted">Warrior-inspired apparel forged with pride. Limited drops, premium build.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <a href="#shop" data-route="home">All Tees</a>
+      </div>
+      <div>
+        <h4>Brand</h4>
+        <a href="#about" data-route="about">About</a>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Yodha. All rights reserved.</div>
+  </footer>
+
+  <!-- CART SIDEBAR (hidden) -->
+  <aside id="cart" class="cart">
+    <div class="cart-header"><h3>Your Cart</h3><button id="closeCart" class="btn ghost">Close</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-summary">
+      <div class="row"><div>Subtotal</div><div id="cartSubtotal">₹0</div></div>
+      <div class="row"><div>Shipping</div><div id="cartShipping">FREE</div></div>
+      <div class="row total"><div>Total</div><div id="cartTotal">₹0</div></div>
+      <button id="goCheckout" class="btn">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <!-- PRODUCT DETAIL MODAL -->
+  <div id="pMask" class="mask hide">
+    <div class="pmodal">
+      <div class="pgrid">
+        <div class="pmedia">
+          <img id="pImg" src="" alt="Product" />
+          <div id="zoom" class="zoom"></div>
+        </div>
+        <div class="pinfo">
+          <span id="pCat" class="chip">Category</span>
+          <h2 id="pTitle"></h2>
+          <div class="price">₹<span id="pPrice"></span></div>
+          <div id="pColors" class="muted"></div>
+
+          <div class="sizes" id="pSizes"></div>
+
+          <div class="pcta">
+            <button id="pAdd" class="btn">Add to Cart</button>
+            <button id="pBuy" class="btn ghost">Buy Now</button>
+          </div>
+
+          <h4>Size Chart (inches)</h4>
+          <table class="size-table">
+            <thead><tr><th>Size</th><th>Chest</th><th>Length</th></tr></thead>
+            <tbody>
+              <tr><td>S</td><td>38</td><td>26</td></tr>
+              <tr><td>M</td><td>40</td><td>27</td></tr>
+              <tr><td>L</td><td>42</td><td>28</td></tr>
+              <tr><td>XL</td><td>44</td><td>29</td></tr>
+              <tr><td>XXL</td><td>46</td><td>30</td></tr>
+            </tbody>
+          </table>
+
+          <h4>Reviews</h4>
+          <div id="revList" class="reviews"></div>
+          <form id="revForm" class="rev-form">
+            <input name="name" placeholder="Your name" required />
+            <select name="rating" required>
+              <option value="">Rating</option>
+              <option>5</option><option>4</option><option>3</option><option>2</option><option>1</option>
+            </select>
+            <textarea name="text" placeholder="Write a review" rows="3"></textarea>
+            <button class="btn" type="submit">Post Review</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal-actions"><button id="pClose" class="btn ghost">Close</button></div>
+    </div>
+  </div>
+
+  <!-- NOTIFY MODAL -->
+  <div id="mask" class="mask hide">
+    <div class="modal">
+      <h3>Get notified for the next drop</h3>
+      <p class="muted">No spam—only warrior-grade updates.</p>
+      <div class="modal-row">
+        <input id="notifyEmail" type="email" placeholder="your@email.com"/>
+        <button id="notifyBtn" class="btn">Notify Me</button>
+      </div>
+      <div style="text-align:right;margin-top:10px"><button id="closeNotify" class="btn ghost">Close</button></div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast">Toast</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
